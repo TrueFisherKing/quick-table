@@ -1,0 +1,28 @@
+.course-overview-table th, .course-overview-table td {
+  border: 1px solid #fff;
+}
+
+.course-overview-table table {
+  border-collapse: collapse;
+  border: 2px solid #4472c4;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.course-overview-table th {
+  background: #4472c4;
+  color: #fff;
+}
+
+.course-overview-table th, .course-overview-table td {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.course-overview-table tr:nth-child(even) {
+  background: #e9ebf5;
+}
+
+.course-overview-table tr:nth-child(odd) {
+  background: #cfd5ea;
+}
