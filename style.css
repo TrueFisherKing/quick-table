@@ -10,9 +10,8 @@
 
 .course-overview-table tbody td {
   display: block;
+  line-height: 1.4;
 }
-
-.course-overview-table th, .course-overview-table td {}
 
 .course-overview-table th {
   background: #4472c4;
@@ -20,7 +19,7 @@
 }
 
 .course-overview-table tr:nth-child(even) {
-  background: rgb(244, 245, 250);
+  background: #e9ebf5;
 }
 
 .course-overview-table tr:nth-child(odd) {
@@ -34,6 +33,10 @@
   word-break: break-all;
   word-break: break-word;
   text-align: center;
+}
+
+.course-overview-table a {
+  color: #1a3d5d;
 }
 
 @media screen and (min-width: 768px) {
@@ -66,8 +69,6 @@
 
 @media screen and (max-width: 768px) {
   .course-overview-table tbody td::before {
-    background: rgb(68, 114, 196);
-    color: #fff;
     display: block;
     font-weight: bold;
     line-height: 30px;
@@ -80,26 +81,33 @@
     width: calc(100% + 20px);
   }
   .course-overview-table th, .course-overview-table td {
-    border: 0;
+    //border: 0;
   }
   .course-overview-table tr {
-    border-bottom: 10px solid rgb(52, 84, 142);
+    //border-bottom: 10px solid rgb(255, 255, 255);
   }
-  .course-overview-table tbody td:nth-child(1)::before {
-    content: "Date";
+  .course-overview-table tbody td:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
   }
   .course-overview-table tbody td:nth-child(2)::before {
-    content: "Notification Headline";
+    content: "Two";
   }
   .course-overview-table tbody td:nth-child(3)::before {
-    content: "Notification Body";
+    content: "Three";
   }
   .course-overview-table tbody td:nth-child(4)::before {
-    content: "Post-Click Copy";
+    content: "Four";
   }
   .course-overview-table tbody td:nth-child(5)::before {
-    content: "Post-Click URL";
+    content: "Five";
   }
+  .table-page .panel-row-style {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .table-page .panel-row-style {
     padding: 0px;
   }
