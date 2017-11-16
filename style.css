@@ -1,28 +1,106 @@
-.course-overview-table th, .course-overview-table td {
-  border: 1px solid #fff;
-}
-
 .course-overview-table table {
   border-collapse: collapse;
-  border: 2px solid #4472c4;
-  table-layout: fixed;
+  overflow: hidden;
   width: 100%;
 }
+
+.course-overview-table thead {
+  display: none;
+}
+
+.course-overview-table tbody td {
+  display: block;
+}
+
+.course-overview-table th, .course-overview-table td {}
 
 .course-overview-table th {
   background: #4472c4;
   color: #fff;
 }
 
-.course-overview-table th, .course-overview-table td {
-  padding: 10px;
-  word-wrap: break-word;
-}
-
 .course-overview-table tr:nth-child(even) {
-  background: #e9ebf5;
+  background: rgb(244, 245, 250);
 }
 
 .course-overview-table tr:nth-child(odd) {
   background: #cfd5ea;
+}
+
+.course-overview-table th, .course-overview-table td {
+  border: 1px solid #fff;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .course-overview-table table {
+    border: 2px solid #4472c4;
+    table-layout: fixed;
+  }
+  .course-overview-table thead {
+    display: table-header-group;
+  }
+  .course-overview-table tbody td {
+    display: table-cell;
+  }
+  .course-overview-table .col-first {
+    width: 10%;
+  }
+  .course-overview-table .col-second {
+    width: 20%;
+  }
+  .course-overview-table .col-third {
+    width: 20%;
+  }
+  .course-overview-table .col-fourth {
+    width: 30%;
+  }
+  .course-overview-table .col-fith {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .course-overview-table tbody td::before {
+    background: rgb(68, 114, 196);
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-top: -10px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    width: 100%;
+    width: calc(100% + 20px);
+  }
+  .course-overview-table th, .course-overview-table td {
+    border: 0;
+  }
+  .course-overview-table tr {
+    border-bottom: 10px solid rgb(52, 84, 142);
+  }
+  .course-overview-table tbody td:nth-child(1)::before {
+    content: "Date";
+  }
+  .course-overview-table tbody td:nth-child(2)::before {
+    content: "Notification Headline";
+  }
+  .course-overview-table tbody td:nth-child(3)::before {
+    content: "Notification Body";
+  }
+  .course-overview-table tbody td:nth-child(4)::before {
+    content: "Post-Click Copy";
+  }
+  .course-overview-table tbody td:nth-child(5)::before {
+    content: "Post-Click URL";
+  }
+  .table-page .panel-row-style {
+    padding: 0px;
+  }
 }
